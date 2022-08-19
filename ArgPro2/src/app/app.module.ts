@@ -8,6 +8,9 @@ import { LogoappComponent } from './components/logoapp/logoapp.component';
 import { SocialComponent } from './components/social/social.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AboutComponent } from './components/about/about.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { EducComponent } from './components/educ/educ.component';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { AboutComponent } from './components/about/about.component';
     LogoappComponent,
     SocialComponent,
     BannerComponent,
-    AboutComponent
+    AboutComponent,
+    SkillsComponent,
+    EducComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

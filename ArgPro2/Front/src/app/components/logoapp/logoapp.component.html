@@ -10,7 +10,8 @@
             <a href=""><img src="../../../assets/instagram.png" id="ig"></a>        
             <a href="https://github.com/ajax9309/ArgPro2.git "><img src="../../../assets/github.png" id="git"></a>
             <a href=""><img src="../../../assets/twitter.png" id="tw"></a>
-            <button (click)="login()" type="button" class="btn btn-success btn-small">Login</button>
+            <button (click)="login()" *ngIf="!isLogged" type="button" class="btn btn-success btn-small">Login</button>
+            <button (click)="onLogOut()"*ngIf="isLogged" type="button" class="btn btn-success btn-small">Logout</button>
         </div>
 
     </div>

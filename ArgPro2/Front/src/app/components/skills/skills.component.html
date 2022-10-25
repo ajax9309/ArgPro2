@@ -1,27 +1,40 @@
-<div class="row">
-    <h1>Experiencia Laboral</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <ul>
-            <li>
-                <h2>Trabajo1</h2> - <h3>(años)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, consequatur? Illum quaerat labore, rerum dignissimos nihil expedita quasi exercitationem, magnam tempore sit obcaecati reprehenderit quisquam impedit dolore aperiam nesciunt ex.</p>
-        </ul>
-        <ul>
-            <li>
-                <h2>Trabajo2</h2> - <h3>(años)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, consequatur? Illum quaerat labore, rerum dignissimos nihil expedita quasi exercitationem, magnam tempore sit obcaecati reprehenderit quisquam impedit dolore aperiam nesciunt ex.</p>
-        </ul>
-        <ul>
-            <li>
-                <h2>Trabajo3</h2> - <h3>(años)</h3>
-            </li>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, consequatur? Illum quaerat labore, rerum dignissimos nihil expedita quasi exercitationem, magnam tempore sit obcaecati reprehenderit quisquam impedit dolore aperiam nesciunt ex.</p>
-        </ul>
-    </div>
+<div class="card">
+  <h1>Experiencia Laboral</h1>
+  <div class="col-lg-2">
+    <button
+      type="button"
+      class="btn btn-primary"
+      routerLink="/newxp"
+      *ngIf="isLogged"
+    ><i class="bi bi-plus-square"></i>
+      Agregar
+    </button>
+  </div>
 
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Explaboral of xp">
+          <td>
+            <strong>{{ Explaboral.nombreE }}</strong>
+          </td>
+          <td>{{ Explaboral.descripcionE }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-secondary"
+              routerLink="/editxp/{{ Explaboral.id }}"
+            >
+              <i class="bi bi-pencil-square"></i>
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="deleteXp(Explaboral.id)" >
+                <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-

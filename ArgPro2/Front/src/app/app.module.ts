@@ -18,6 +18,10 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from '@angular/forms';
 import { InterceptSvc } from './services/intercept-svc';
+import { NewxpComponent } from './components/skills/newxp.component';
+import { EditxpComponent } from './components/skills/editxp.component';
+import { NeweducComponent } from './components/educ/neweduc.component';
+import { EditeducComponent } from './components/educ/editeduc.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,13 +35,17 @@ import { InterceptSvc } from './services/intercept-svc';
     ProyectsComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewxpComponent,
+    EditxpComponent,
+    NeweducComponent,
+    EditeducComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserModule,
+    BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule
     

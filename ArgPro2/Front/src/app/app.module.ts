@@ -22,6 +22,9 @@ import { NewxpComponent } from './components/skills/newxp.component';
 import { EditxpComponent } from './components/skills/editxp.component';
 import { NeweducComponent } from './components/educ/neweduc.component';
 import { EditeducComponent } from './components/educ/editeduc.component';
+import { EditskillComponent } from './components/hardysoft/editskill.component';
+import { NewskillComponent } from './components/hardysoft/newskill.component';
+import { EditaboutComponent } from './components/about/editabout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,10 @@ import { EditeducComponent } from './components/educ/editeduc.component';
     NewxpComponent,
     EditxpComponent,
     NeweducComponent,
-    EditeducComponent
+    EditeducComponent,
+    EditskillComponent,
+    NewskillComponent,
+    EditaboutComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,11 @@ div{
         box-shadow: 5px 5px 5px black;
         top:500px;
     }
+    .descrip{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media (max-width:575px){
     #pic{

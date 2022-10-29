@@ -1,15 +1,15 @@
-<div class="card" *ngIf="expLab">
+<div class="card" *ngIf="skill">
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div>
                 <div class="form-group">
-                    <label for="nombreE">Nombre</label>
-                    <input  type="text" class="form-control" id="nombreE" name="nombreE"[(ngModel)]="expLab.nombreE" required>          
+                    <label for="nomSkill">Nombre de la habilidad</label>
+                    <input  type="text" class="form-control" id="nomSkill" name="nomSkill"[(ngModel)]="skill.nomSkill" required>          
                 </div>
                 <div class="form-group">
-                    <label for="descripcionE">Desc tarea</label>
-                    <input  type="text" class="form-control" id="descripcionE" name="descripcionE"[(ngModel)]="expLab.descripcionE" required>         
+                    <label for="porcSkill">Descripción de estudios</label>
+                    <input  type="text" class="form-control" id="porcSkill" name="porcSkill"[(ngModel)]="skill.porcSkill" required>         
                 </div>
                 <div>
                     <button class="btn btn-success">
